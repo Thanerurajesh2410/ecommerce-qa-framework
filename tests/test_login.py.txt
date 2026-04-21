@@ -1,0 +1,11 @@
+import pytest
+from pages.login_page import LoginPage
+
+def test_valid_login(setup):
+    driver = setup
+    driver.get("https://example.com/login")
+
+    login = LoginPage(driver)
+    login.login("testuser", "password")
+
+    assert "dashboard" in driver.current_url

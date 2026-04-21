@@ -1,0 +1,2 @@
+[pytest]
+addopts = -n=2 --html=reports/report.html --self-contained-html
